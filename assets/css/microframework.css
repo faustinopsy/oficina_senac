@@ -9,7 +9,7 @@
   --bem-warning:#f59e0b;
   --bem-dark:#1f2937;
   --bem-light:#f3f4f6;
-  --bem-bg:#ffffff;
+  --bem-bg:#1a1a1b;
   --bem-surface:#ffffff;
   --bem-text:#1f2937;
   --bem-text-muted:#6b7280;
@@ -79,6 +79,7 @@ header{
   /*                    x     y      */
   transform: translate(-120px, 0);
   z-index: 1001;
+  width: 100px;
 }
 .bem-hero{
   /*relativo para c ontrolar a posição absoluta dos filhos  */
@@ -104,7 +105,7 @@ header{
   backdrop-filter: blur(15px);
   position: absolute;
   top: 0;
-  left: 0;
+  left: calc(50% /2);
   width: 50%;
   height: 100%;
   z-index: 10;
@@ -129,7 +130,7 @@ header{
   padding:0 var(--bem-spacing-md);
 }
 .bem-container--fluid{ max-width:100% }
-.bem-container--narrow{ max-width:800px }
+.bem-container--narrow{ max-width:600px }
 .bem-grid { display: grid; gap: var(--bem-spacing-md) }
 .bem-btn{
   display:inline-flex;
@@ -395,6 +396,14 @@ header{
 .bem-shadow-lg{ box-shadow:var(--bem-shadow-lg) }
 .bem-grid-auto-4{ display:grid;grid-template-columns:repeat(auto-fit, minmax(60px, 1fr))}
 @media(max-width:768px){
+  .bem-hero__titulo{
+    left: 0;
+    width: 100%;
+  }
+  .bem-container--narrow{ width:100%; max-width:768px ; }
+  .bem-hero_imagem{
+    display: none;
+  }
   .bem-grid--cols-2,.bem-grid--cols-3,.bem-grid--cols-4 { grid-template-columns: 1fr }
   .bem-navbar__menu{ display:none }
   .bem-navbar__toggle{ display:block; cursor:pointer; margin-left:auto; }
