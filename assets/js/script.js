@@ -1,3 +1,15 @@
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".bem-navbar");
+  const navbar2 = document.querySelector(".bem-navbar--secundaria");
+  if (window.scrollY > 0) {
+    navbar.classList.add("scrolled-1");
+    navbar2.classList.add("scrolled-2");
+  } else {
+    navbar.classList.remove("scrolled-1");
+    navbar2.classList.remove("scrolled-2");
+  }
+});
+
 function initComparisons() {
   var x, i;
   /* Find all elements with an "overlay" class: */

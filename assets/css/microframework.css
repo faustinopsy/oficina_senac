@@ -136,7 +136,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65.75vh;
+  height: 75.75vh;
   background-image: url(../imagens/imagem_hero/fundo-hero.jpg);
   /*cover = estica e contain manter o tamanho original  */
   background-size: cover;
@@ -462,6 +462,7 @@ header{
   }
   .bem-navbar--secundaria{
     position:fixed; top: 0;
+    width: 100%;
   }
   .bem-logo{
     display: block;
@@ -550,4 +551,10 @@ header{
   0% { left: 80px; }
   50% { left: 85px; }
   100% { left: 75px; }
+}
+.scrolled-1{
+  height: 50px;
+}
+.scrolled-2{
+  top: 50px;
 }
