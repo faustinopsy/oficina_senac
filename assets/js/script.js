@@ -1,7 +1,7 @@
 window.addEventListener("scroll", function() {
   const navbar = document.querySelector(".bem-navbar");
   const navbar2 = document.querySelector(".bem-navbar--secundaria");
-  if (window.scrollY > 0) {
+  if (window.scrollY > 0 && window.innerWidth > 768) {
     navbar.classList.add("scrolled-1");
     navbar2.classList.add("scrolled-2");
   } else {
