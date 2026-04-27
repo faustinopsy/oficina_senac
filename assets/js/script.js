@@ -13,7 +13,7 @@ function initComparisons() {
     w = img.offsetWidth;
     h = img.offsetHeight;
     /* Set the width of the img element to 50%: */
-    img.style.width = (w / 2) + "px";
+    img.style.width = 100 + "px";
     /* Create slider: */
     slider = document.createElement("DIV");
     slider.setAttribute("class", "img-comp-slider");
@@ -21,7 +21,7 @@ function initComparisons() {
     img.parentElement.insertBefore(slider, img);
     /* Position the slider in the middle: */
     slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    slider.style.left = 80 + "px";
     /* Execute a function when the mouse button is pressed: */
     slider.addEventListener("mousedown", slideReady);
     /* And another function when the mouse button is released: */
@@ -53,6 +53,7 @@ function initComparisons() {
       if (pos < 0) pos = 0;
       if (pos > w) pos = w;
       /* Execute a function that will resize the overlay image according to the cursor: */
+      
       slide(pos);
     }
     function getCursorPos(e) {
