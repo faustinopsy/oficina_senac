@@ -16,6 +16,7 @@ function initComparisons() {
     img.style.width = (w / 2) + "px";
     /* Create slider: */
     slider = document.createElement("DIV");
+    // classlist.add("ativo")
     slider.setAttribute("class", "img-comp-slider");
     /* Insert slider */
     img.parentElement.insertBefore(slider, img);
