@@ -76,3 +76,30 @@ function initComparisons() {
   }
 }
 initComparisons();
+
+// Função para Animação de Revelação ao rolar a página
+document.addEventListener("DOMContentLoaded", function() {
+  const elementosRevelar = document.querySelectorAll(".revelar");
+
+  // Configurações do observador: define quando a animação deve disparar
+  const opcoesRevelacao = {
+    threshold: 0.15 // O elemento revela quando 15% dele estiver visível na tela
+  };
+
+  const animacaoAoRolar = new IntersectionObserver(function(entradas, observador) {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        // Quando entra na viewport, adiciona a classe 'ativo'
+        entrada.target.classList.add("ativo");
+      } else {
+        // Opcional: remove a classe para que a animação ocorra novamente ao subir
+        entrada.target.classList.remove("ativo");
+      }
+    });
+  }, opcoesRevelacao);
+
+  // Começa a observar cada elemento que tenha a classe '.revelar'
+  elementosRevelar.forEach(elemento => {
+    animacaoAoRolar.observe(elemento);
+  });
+});
