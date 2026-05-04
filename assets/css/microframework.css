@@ -63,6 +63,7 @@ body{
   background:var(--bem-light);
   transition:background .25s, color .25s;
   cursor: url(../imagens/cursor/cursor.svg), auto;
+  padding-top: 70px;
 }
 a{
   cursor: url(../imagens/cursor/cursor-ancora.svg), auto;
@@ -348,9 +349,10 @@ header{
   padding:var(--bem-spacing-md) var(--bem-spacing-lg);
   box-shadow:var(--bem-shadow-sm);
   transition:background .25s;
-  position:sticky;
+  position:fixed;
   top:0; 
-  z-index:100;
+  left:0;
+  z-index:1000;
   width: 100%;
   background-color: var(--bem-primary);
   color: var(--bem-secondary);
@@ -455,6 +457,9 @@ header{
   .bem-hero__titulo{
     left: 0;
     width: 100%;
+  }
+  body {
+    padding-top: 0;
   }
   .bem-container--narrow{ width:100%; max-width:768px ; }
   .bem-hero_imagem{
